@@ -9,7 +9,7 @@ import aboutImg from "@/public/imgs/about_img.png"
 export default function About() {
   return (
     <>
-      <section className="about__container">
+      <section className="about__section">
         <div className="about__legend_container">
           <span className="about__legend_title">
             Ruslan Rudnev

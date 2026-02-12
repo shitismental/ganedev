@@ -15,7 +15,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -39,6 +40,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  max-height: 100%;
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -53,14 +55,6 @@ button {
 
 a {
   color: var(--clr-black);
-}
-
-.svg__black {
-  fill: blue;
-}
-
-.svg__white {
-  fill: #fff;
 }
 
 .container {

@@ -9,7 +9,7 @@ import ReviewsImg from "@/public/imgs/reviews_img.png"
 
 export default function Reviews() {
   return (
-    <section className="reviews__container">
+    <section className="reviews__section">
       <div className="reviews__line"></div>
       <div className="reviews__content_wrapper">
         <div className="reviews__content_container">

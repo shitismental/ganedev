@@ -1,0 +1,123 @@
+.work__card_container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #2F2F2F;
+  transition: height 150ms ease-in-out;
+}
+
+.work__card_content_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  bottom: 0;
+  width: 100%;
+  padding: 35px;
+}
+
+.work__card_name_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.work__card_name_text {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
+.work__card_name_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work__card_name_icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.work__card_name_icon:hover {
+  opacity: 0.7;
+}
+
+.work__card_tags_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.work__tag_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.work__tag_text {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--clr-white);
+}
+
+.work__card_desc {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--clr-white);
+  display: none;
+}
+
+.work__card_btns {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  margin-top: 20px;
+  display: none;
+}
+
+.work__card_btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #CBE70B;
+  color: #CBE70B;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  padding: 8px 11px;
+  border-radius: 10px;
+}
+
+.work__card_btn:hover {
+  background-color: #CBE70B;
+  color: var(--clr-black);
+}
+
+.work__card_container:hover {
+  height: 500px;
+}
+
+.work__card_container:hover .work__card_tags_container {
+  display: none;
+}
+
+.work__card_container:hover .work__card_desc,
+.work__card_container:hover .work__card_btns{
+  display: flex;
+}

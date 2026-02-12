@@ -1,0 +1,33 @@
+.work__section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.work__section_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 30px;
+}
+
+.work__section_title {
+  font-size: 22px;
+  color: var(--clr-white);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.work__section_name {
+  font-size: 14px;
+  color: var(--clr-white);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.work__section_cards_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
