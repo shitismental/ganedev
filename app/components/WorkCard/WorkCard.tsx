@@ -52,6 +52,7 @@ export default function WorkCard({ name, desc, img, work_tags }: WorkCardTypes) 
           </Link>
         </div>
       </div>
+      <Link href="https://youtube.com" target="_blank" className="work__card_link_overlay" />
     </div>
   )
 }
