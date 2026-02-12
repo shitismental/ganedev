@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import ResumeBtn from "../ResumeBtn/ResumeBtn"
+import ResumeBtn from "../../ResumeBtn/ResumeBtn"
 import "./About.css"
 
 import aboutImg from "@/public/imgs/about_img.png"

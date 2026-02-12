@@ -13,6 +13,9 @@
 
 .main__container {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .footer {
