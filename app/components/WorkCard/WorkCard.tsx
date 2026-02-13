@@ -32,7 +32,10 @@ export default function WorkCard({ name, desc, img, work_tags }: WorkCardTypes) 
           <div className="work__card_tags_container">
             {work_tags.map(work_tag => {
               return (
-                <div key={work_tag.id} className="work__tag_container">
+                <div
+                  key={work_tag.id}
+                  className={`work__tag_container${(work_tags.length == 3 && work_tag.id == 1) ? " work__tag_container_long": ""}`}
+                >
                   <p className="work__tag_text">{work_tag.tag}</p>
                 </div>
               )

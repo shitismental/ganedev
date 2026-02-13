@@ -68,6 +68,10 @@
   flex: 1;
 }
 
+.work__tag_container_long {
+  flex: 2;
+}
+
 .work__tag_text {
   font-size: 13px;
   font-weight: bold;
