@@ -186,7 +186,7 @@
   .header__container {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -1000%;
     width: 280px;
     height: 100vh;
     max-height: 100vh;
