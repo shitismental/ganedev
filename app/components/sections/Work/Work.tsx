@@ -6,7 +6,7 @@ import "./Work.css"
 
 export default function Work() {
   return (
-    <section className="work__section">
+    <section className="work__section" id="work__section">
       <div className="work__section_top">
         <p className="work__section_title">My work</p>
         <p className="work__section_name">Ruslan Rudniev</p>

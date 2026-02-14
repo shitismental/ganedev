@@ -3,16 +3,9 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Logo from "@/public/icons/logo.svg"
-
-import telegram from "@/public/icons/socials/telegram.svg"
-import linkedin from "@/public/icons/socials/linkedin.svg"
-import whatsapp from "@/public/icons/socials/whatsapp.svg"
-import facebook from "@/public/icons/socials/facebook.svg"
-import twitter from "@/public/icons/socials/twitter.svg"
-import email from "@/public/icons/socials/email.svg"
 
 import profile from "@/public/icons/profile_filled.svg"
 import chat from "@/public/icons/chat_bubble.svg"
@@ -25,10 +18,63 @@ import "./Navbar.css"
 export default function Navbar() {
 
   const [isActive, setIsActive] = useState("about")
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionName = entry.target.id.replace("__section", "")
+          setIsActive(sectionName)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0,
+    })
+
+    const sections = [
+      "about__section",
+      "reviews__section",
+      "work__section",
+      "design__section",
+      "marketing__section"
+    ]
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const handleLinkClick = (tabName: string) => {
+    setIsActive(tabName)
+    setIsMenuOpen(false)
+  }
 
   return (
     <>
-      <header className="header__container">
+      <div className="nav__mobile_topbar">
+        <Link href="/" className="nav__logo_container">
+          <Image src={Logo} alt="logo" />
+        </Link>
+        <button className={`nav__hamburger ${isMenuOpen ? "open" : ""}`} onClick={() => setIsMenuOpen(true)}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line className="hamburger__line hamburger__line-top" x1="3" y1="6" x2="21" y2="6"></line>
+            <line className="hamburger__line hamburger__line-middle" x1="3" y1="12" x2="21" y2="12"></line>
+            <line className="hamburger__line hamburger__line-bottom" x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div className={`nav__mobile_overlay ${isMenuOpen ? "open" : ""}`}>
+        <div className="nav__backdrop" onClick={() => setIsMenuOpen(false)}></div>
+      </div>
+      <header className={`header__container ${isMenuOpen ? "open" : ""}`}>
         <nav className="nav__container">
           <Link href="/" className="nav__logo_container">
             <Image
@@ -38,37 +84,37 @@ export default function Navbar() {
           </Link>
           <div className="nav__links_container">
             <Link
-              onClick={() => setIsActive("about")}
+              onClick={() => handleLinkClick("about")}
               className={`nav__link ${isActive == "about" && "nav__active"}`}
-              href="#">
+              href="#about__section">
               <Image src={profile} alt="profile icon" />
               About me
             </Link>
             <Link
-              onClick={() => setIsActive("reviews")}
+              onClick={() => handleLinkClick("reviews")}
               className={`nav__link ${isActive == "reviews" && "nav__active"}`}
-              href="#">
+              href="#reviews__section">
               <Image src={chat} alt="chat icon" />
               Client review
             </Link>
             <Link
-              onClick={() => setIsActive("work")}
+              onClick={() => handleLinkClick("work")}
               className={`nav__link ${isActive == "work" && "nav__active"}`}
-              href="#">
+              href="#work__section">
               <Image src={briefcase} alt="briefcase icon" />
               My work
             </Link>
             <Link
-              onClick={() => setIsActive("design")}
+              onClick={() => handleLinkClick("design")}
               className={`nav__link ${isActive == "design" && "nav__active"}`}
               href="#">
               <Image src={gamepad} alt="gamepad icon" />
               Game design
             </Link>
             <Link
-              onClick={() => setIsActive("marketing")}
+              onClick={() => handleLinkClick("marketing")}
               className={`nav__link ${isActive == "marketing" && "nav__active"}`}
-              href="#">
+              href="#marketing__section">
               <Image src={target} alt="target icon" />
               Marketing & monetization
             </Link>

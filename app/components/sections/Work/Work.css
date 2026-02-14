@@ -31,3 +31,33 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+  .work__section_cards_container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 640px) {
+  .work__section_top {
+    padding: 0;
+  }
+}
+
+@media (max-width: 475px) {
+
+}

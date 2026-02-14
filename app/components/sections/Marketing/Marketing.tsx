@@ -2,7 +2,7 @@ import "./Marketing.css"
 
 export default function Marketing() {
   return (
-    <section className="marketing__section">
+    <section className="marketing__section" id="marketing__section">
       <div className="marketing__top_container">
         <p className="marketing__top_title">Marketing and monetization</p>
         <p className="marketing__top_name">Ruslan Rudniev</p>
