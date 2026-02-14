@@ -52,10 +52,12 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  user-select: none;
 }
 
 a {
   color: var(--clr-black);
+  user-select: none;
 }
 
 /* @media (max-width: 1536px) {

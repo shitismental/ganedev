@@ -27,15 +27,22 @@
 @media (max-width: 1280px) {
   .layout__container {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
   }
 
   .main__container {
     grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .navbar {
     grid-column: 1 / -1;
+    grid-row: 1;
     margin-bottom: 2rem;
+  }
+
+  .footer {
+    grid-row: 3;
   }
 }
 

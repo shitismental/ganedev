@@ -10,6 +10,7 @@ export const workData = [
     id: 0,
     name: "the dark swordsman",
     desc: "A first-person dark fantasy adventure about a cursed immortal warrior seeking inner peace in a brutal medieval world.",
+    full_desc: "It is a dark fantasy, story-focused adventure game played from a first-person view. You play as the Dark Swordsman, a warrior cursed to live forever unless he defeats the demons that keep him alive. The game tells a deep and emotional story about revenge, regret, and the hope for freedom.\n\nInspired by the story of Berserk and Dark Souls atmosphere, it features a dark, medieval world, realistic sword fighting, and powerful cutscenes that pull you into the main character’s journey. In addition to writing a script for the game, I also developed an MVP of Level 1 (see details in the Level 1 section of the GDD).",
     img: Game1,
     tags: [
       {
@@ -34,6 +35,7 @@ export const workData = [
     id: 1,
     name: "nightfall reserve",
     desc: "VR simulation where you survive one night exploring natural and artificial forests to raise environmental awareness.”",
+    full_desc: "none",
     img: Game2,
     tags: [
       {
@@ -58,6 +60,7 @@ export const workData = [
     id: 2,
     name: "the raid",
     desc: "NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO",
+    full_desc: "AJLFSDLJFDSLJFSDLJKLlfsdlkfdklsdflkasdlkfldklfkalfkdsfsdklfdsklfdsklfdslkfdslkfdsl fsdlfl kdldfsk ls fkdk dflksdf lskfd lksf dlksf dklsfd klsf dlksf dklsf dlk sfdlksf dlksf dklsfdl kfskl dsfkl dlfks dlkfsd klfsd\nsfldjjlfdsjlfsdljfsdljfsdjlfdsljfsdljfsdljfsdjlsfdjlsdfjlljsfdljfsdljfsdljfsdljfsdljfsdljfsdljfsdjlfsdlj ljsdf ljfsd jlsf djlsfd ljsf dlj fsldj",
     img: Game3,
     tags: [
       {
@@ -78,6 +81,7 @@ export const workData = [
     id: 3,
     name: "getout",
     desc: "NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO",
+    full_desc: "none",
     img: Game4,
     tags: [
       {
@@ -102,6 +106,7 @@ export const workData = [
     id: 4,
     name: "Shape Shooter",
     desc: "NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO",
+    full_desc: "none",
     img: Game5,
     tags: [
       {
@@ -116,8 +121,9 @@ export const workData = [
   },
   {
     id: 5,
-    name: "Shape Shooter",
+    name: "Alfa App",
     desc: "NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO NO INFO",
+    full_desc: "none",
     img: Game6,
     tags: [
       {

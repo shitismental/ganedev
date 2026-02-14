@@ -1,13 +1,12 @@
-import Image from "next/image";
 import "./index.css"
 
-import Navbar from "./components/Navbar/Navbar";
-import About from "./components/sections/About/About";
-import Reviews from "./components/sections/Reviews/Reviews";
-import Work from "./components/sections/Work/Work"
-import Marketing from "./components/sections/Marketing/Marketing";
-import RightSidePanel from "./components/RightSidePanel/RightSidePanel";
-import Footer from "./components/Footer/Footer"
+import Navbar from "./components/layout/Navbar/Navbar";
+import About from "./components/sections/HomePageSections/About/About";
+import Reviews from "./components/sections/HomePageSections/Reviews/Reviews";
+import Work from "./components/sections/HomePageSections/Work/Work"
+import Marketing from "./components/sections/HomePageSections/Marketing/Marketing";
+import RightSidePanel from "./components/helpers/RightSidePanel/RightSidePanel";
+import Footer from "./components/layout/Footer/Footer"
 
 export default function Home() {
   return (

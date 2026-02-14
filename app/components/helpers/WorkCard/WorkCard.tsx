@@ -9,13 +9,14 @@ type WorkTags = {
 }
 
 type WorkCardTypes = {
+  slug: string,
   name: string;
   desc: string;
   img: any;
   work_tags: WorkTags[];
 }
 
-export default function WorkCard({ name, desc, img, work_tags }: WorkCardTypes) {
+export default function WorkCard({ name, slug, desc, img, work_tags }: WorkCardTypes) {
   return (
     <div className="work__card_container">
       <Image src={img} alt="work image" className="work__card_img" />
@@ -34,7 +35,7 @@ export default function WorkCard({ name, desc, img, work_tags }: WorkCardTypes) 
               return (
                 <div
                   key={work_tag.id}
-                  className={`work__tag_container${(work_tags.length == 3 && work_tag.id == 1) ? " work__tag_container_long": ""}`}
+                  className={`work__tag_container${(work_tags.length == 3 && work_tag.id == 1) ? " work__tag_container_long" : ""}`}
                 >
                   <p className="work__tag_text">{work_tag.tag}</p>
                 </div>
@@ -55,7 +56,7 @@ export default function WorkCard({ name, desc, img, work_tags }: WorkCardTypes) 
           </Link>
         </div>
       </div>
-      <Link href="https://youtube.com" target="_blank" className="work__card_link_overlay" />
+      <Link href={`/work/${slug}`} className="work__card_link_overlay" aria-label={`View details for ${name}`} />
     </div>
   )
 }

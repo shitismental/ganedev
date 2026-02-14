@@ -1,10 +1,18 @@
 import { workData } from "@/app/tempdata/work_data"
 
-import WorkCard from "../../WorkCard/WorkCard"
+import WorkCard from "../../../helpers/WorkCard/WorkCard"
 
 import "./Work.css"
 
 export default function Work() {
+
+  const generateSlug = (name: string) => {
+      return name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)+/g, '');
+    };
+
   return (
     <section className="work__section" id="work__section">
       <div className="work__section_top">
@@ -13,8 +21,11 @@ export default function Work() {
       </div>
       <div className="work__section_cards_container">
         {workData.map(work => {
+
+          const workSlug = generateSlug(work.name)
+
           return (
-            <WorkCard key={work.id} name={work.name} desc={work.desc} img={work.img} work_tags={work.tags} />
+            <WorkCard key={work.id} slug={workSlug} name={work.name} desc={work.desc} img={work.img} work_tags={work.tags} />
           )
         })}
       </div>
