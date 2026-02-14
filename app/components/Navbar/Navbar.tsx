@@ -52,9 +52,14 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [])
 
-  const handleLinkClick = (tabName: string) => {
+  const handleButtonClick = (tabName: string, targetId: string) => {
     setIsActive(tabName)
     setIsMenuOpen(false)
+
+    const element = document.getElementById(targetId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (
@@ -83,41 +88,41 @@ export default function Navbar() {
             />
           </Link>
           <div className="nav__links_container">
-            <Link
-              onClick={() => handleLinkClick("about")}
+            <button
+              onClick={() => handleButtonClick("about", "about__section")}
               className={`nav__link ${isActive == "about" && "nav__active"}`}
-              href="#about__section">
+              >
               <Image src={profile} alt="profile icon" />
               About me
-            </Link>
-            <Link
-              onClick={() => handleLinkClick("reviews")}
+            </button>
+            <button
+              onClick={() => handleButtonClick("reviews", "reviews__section")}
               className={`nav__link ${isActive == "reviews" && "nav__active"}`}
-              href="#reviews__section">
+              >
               <Image src={chat} alt="chat icon" />
               Client review
-            </Link>
-            <Link
-              onClick={() => handleLinkClick("work")}
+            </button>
+            <button
+              onClick={() => handleButtonClick("work", "work__section")}
               className={`nav__link ${isActive == "work" && "nav__active"}`}
-              href="#work__section">
+              >
               <Image src={briefcase} alt="briefcase icon" />
               My work
-            </Link>
-            <Link
-              onClick={() => handleLinkClick("design")}
+            </button>
+            <button
+              onClick={() => handleButtonClick("design", "design__section")}
               className={`nav__link ${isActive == "design" && "nav__active"}`}
-              href="#">
+              >
               <Image src={gamepad} alt="gamepad icon" />
               Game design
-            </Link>
-            <Link
-              onClick={() => handleLinkClick("marketing")}
+            </button>
+            <button
+              onClick={() => handleButtonClick("marketing", "marketing__section")}
               className={`nav__link ${isActive == "marketing" && "nav__active"}`}
-              href="#marketing__section">
+              >
               <Image src={target} alt="target icon" />
               Marketing & monetization
-            </Link>
+            </button>
           </div>
           <div className="nav__socials_wrapper">
             <div className="nav__socials_container">
