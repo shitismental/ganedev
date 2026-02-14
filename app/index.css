@@ -4,7 +4,7 @@
   grid-template-rows: 1fr auto;
   min-height: 300vh;
   gap: 2rem;
-  padding: 1.5rem 3rem;
+  padding: 3rem;
 }
 
 .navbar {

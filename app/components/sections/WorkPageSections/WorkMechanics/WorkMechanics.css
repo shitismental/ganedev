@@ -1,0 +1,38 @@
+.work__mechanics_section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.work__mechanics_legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 30px;
+}
+
+.work__mechanics_legend_title {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
+.work__mechanics_legend_name {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
+.work__mechanics_line {
+  height: 3px;
+  width: 100%;
+  background-color: #2F2F2F;
+}
+
+@media (max-width: 640px) {
+  .work__mechanics_legend {
+    padding: 0;
+  }
+}

@@ -59,6 +59,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 7px;
 }
 
@@ -137,11 +138,13 @@
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
+  padding: 8px 20px;
   border-radius: 40px;
   border: 1px solid #CBE70B;
   flex: 10;
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  text-align: center;
   white-space: nowrap;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
 .work__about_content_bottom_top_btn:hover {
@@ -151,7 +154,6 @@
 
 .work__about_content_bottom_top_btn.email {
   flex: 0.5;
-  padding: 8px 20px;
 }
 
 .work__about_content_bottom_top_btn.email svg {
@@ -171,8 +173,9 @@
   color: #CBE70B;
   font-weight: 600;
   text-transform: uppercase;
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  text-align: center;
   white-space: nowrap;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
 .work__about_content_bottom_btn.script {
@@ -195,8 +198,45 @@
   object-fit: contain;
 }
 
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
 @media (max-width: 1024px) {
   .work__about_wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {
+
+  .work__about_content_bottom_btns_top,
+  .work__about_content_bottom_btns_bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work__about_tag_container {
+    flex: 1;
+  }
+}
+
+@media (max-width: 475px) {
+
+  .work__about_content_bottom_desc,
+  .work__about_content_top_title {
+    word-break: break-all;
+  }
+
+  .work__about_content_bottom_top_btn,
+  .work__about_content_bottom_btn {
+    white-space: wrap;
+  }
+
+  .work__about_content_bottom_btns_top {
+    display: flex;
     flex-direction: column;
   }
 }

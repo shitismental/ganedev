@@ -1,0 +1,22 @@
+import Image from "next/image"
+import test from "@/public/imgs/test.png"
+
+import "./ThirdWorkMechanic.css"
+
+export default function ThirdWorkMechanic() {
+  return(
+    <div className="work__mechanics_third_mechanic_container">
+      <div className="work__mechanics_third_mechanic_content_container">
+        <div className="work__mechanics_third_mechanic_content_title_container">
+          <p className="work__mechanics_third_mechanic_content_title">Title here Title here</p>
+        </div>
+        <div className="work__mechanics_third_mechanic_content_desc_container">
+          <p className="work__mechanics_third_mechanic_content_desc">desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here desc here </p>
+        </div>
+      </div>
+      <div className="work__mechanics_third_mechanic_img_container">
+        <Image src={test} alt="test" className="work__mechanics_third_mechanic_img" />
+      </div>
+    </div>
+  )
+}

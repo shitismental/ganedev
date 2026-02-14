@@ -1,0 +1,88 @@
+.work__mechanics_third_mechanic_container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.work__mechanics_third_mechanic_content_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.work__mechanics_third_mechanic_content_title_container {
+  display: flex;
+  align-items: center;
+  background-color: #1C1C1C;
+  padding: 22px 32px;
+  border-radius: 20px;
+  border: 1px solid #2F2F2F;
+}
+
+.work__mechanics_third_mechanic_content_title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
+.work__mechanics_third_mechanic_content_desc_container {
+  display: flex;
+  align-items: flex-start;
+  padding: 22px 32px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid #2F2F2F;
+  height: 100%;
+}
+
+.work__mechanics_third_mechanic_content_desc {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--clr-white);
+}
+
+.work__mechanics_third_mechanic_img_container {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.work__mechanics_third_mechanic_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1536px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+  .work__mechanics_third_mechanic_container {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .work__mechanics_third_mechanic_content_container {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 475px) {
+
+}
