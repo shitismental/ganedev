@@ -190,7 +190,7 @@
 
 .work__about_img {
   flex: 1;
-  max-height: 350px;
+  max-height: 450px;
   min-width: 0;
   object-fit: contain;
 }
