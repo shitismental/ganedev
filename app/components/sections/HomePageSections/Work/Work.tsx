@@ -25,7 +25,7 @@ export default function Work() {
           const workSlug = generateSlug(work.name)
 
           return (
-            <WorkCard key={work.id} slug={workSlug} name={work.name} desc={work.desc} img={work.img} work_tags={work.tags} />
+            <WorkCard key={work.id} slug={workSlug} name={work.name} desc={work.desc} video={work.video} work_tags={work.tags} />
           )
         })}
       </div>

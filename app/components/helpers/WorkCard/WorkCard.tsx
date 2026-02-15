@@ -12,14 +12,26 @@ type WorkCardTypes = {
   slug: string,
   name: string;
   desc: string;
-  img: any;
+  video?: string;
   work_tags: WorkTags[];
 }
 
-export default function WorkCard({ name, slug, desc, img, work_tags }: WorkCardTypes) {
+export default function WorkCard({ name, slug, desc, video, work_tags }: WorkCardTypes) {
   return (
     <div className="work__card_container">
-      <Image src={img} alt="work image" className="work__card_img" />
+      {video && (
+        <video
+          src={video}
+          className="work__card_img"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        >
+          Your browser does not support the video tag.
+        </video>
+      )}
       <div className="work__card_content_container">
         <div className="work__card_name_container">
           <p className="work__card_name_text">{name}</p>
