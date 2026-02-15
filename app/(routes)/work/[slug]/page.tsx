@@ -36,7 +36,7 @@ export default async function WorkShowcasePage({ params }: { params: Params }) {
     return <h1>Project not found!</h1>;
   }
 
-  const { id, name, full_desc, img, tags } = project;
+  const { id, name, full_desc, tags } = project;
 
   return (
     <div className="layout__container">
