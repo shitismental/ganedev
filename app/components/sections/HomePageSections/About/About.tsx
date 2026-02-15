@@ -26,7 +26,7 @@ export default function About() {
           </div>
           <div className="about__content_video_container">
             <video 
-              src="/videos/Home_about.mp4" 
+              src="/videos/Home_About.mp4" 
               className="about__content_video_preview"
               autoPlay 
               loop 
