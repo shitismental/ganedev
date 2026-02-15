@@ -25,7 +25,17 @@ export default function About() {
             </div>
           </div>
           <div className="about__content_video_container">
-            <Image src={aboutImg} width={1000} height={1000} alt="video preview" className="about__content_video_preview" />
+            <video 
+              src="/videos/Home_about.mp4" 
+              className="about__content_video_preview"
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              preload="metadata"
+            >
+              Your browser does not support the video tag.
+            </video>
             <ResumeBtn />
           </div>
         </div>
