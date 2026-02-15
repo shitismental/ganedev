@@ -8,6 +8,11 @@ import Marketing from "./components/sections/HomePageSections/Marketing/Marketin
 import RightSidePanel from "./components/helpers/RightSidePanel/RightSidePanel";
 import Footer from "./components/layout/Footer/Footer"
 
+export const metadata = {
+  title: 'Ruslan Rudniev',
+  description: 'Portfolio of my 3D games and game design projects.',
+}
+
 export default function Home() {
   return (
     <>

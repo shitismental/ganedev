@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       <footer className="footer__container">
-        <Link href="#" className="footer__logo_container">
+        <Link href="/" className="footer__logo_container">
           <Image src={Logo} alt="logo icon" />
           <p className="footer__logo_text">Ruslan Rudnev</p>
         </Link>

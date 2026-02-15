@@ -11,6 +11,17 @@ import { workData } from "@/app/tempdata/work_data";
 
 type Params = Promise<{ slug: string }>;
 
+export async function generateMetadata({ params }: { params: Params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
+
+  const formattedTitle = slug.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+  return {
+    title: `${formattedTitle} | Ruslan Rudniev`,
+  }
+}
+
 export default async function WorkShowcasePage({ params }: { params: Params }) {
 
   const resolvedParams = await params;
