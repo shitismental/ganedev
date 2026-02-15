@@ -72,7 +72,6 @@
   border-radius: 5px;
   border: 1px solid var(--clr-white);
   flex-wrap: wrap;
-  cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }
 
@@ -83,14 +82,6 @@
   white-space: nowrap;
   user-select: none;
   transition: color 150ms ease-in;
-}
-
-.work__about_tag_container:hover {
-  background-color: var(--clr-white);
-}
-
-.work__about_tag_container:hover .work__about_tag_text {
-  color: var(--clr-black);
 }
 
 .work__about_content_bottom {
@@ -111,7 +102,7 @@
 
 .work__about_content_bottom_desc {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--clr-white);
 }
 

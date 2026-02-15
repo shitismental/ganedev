@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   background-color: #1C1C1C;
-  padding: 22px 32px;
+  padding: 15px 25px;
   border-radius: 20px;
   border: 1px solid #2F2F2F;
 }
@@ -30,7 +30,7 @@
 .work__mechanics_third_mechanic_content_desc_container {
   display: flex;
   align-items: flex-start;
-  padding: 22px 32px;
+  padding: 22px 25px;
   background-color: transparent;
   border-radius: 20px;
   border: 1px solid #2F2F2F;
@@ -39,7 +39,7 @@
 
 .work__mechanics_third_mechanic_content_desc {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--clr-white);
 }
 
