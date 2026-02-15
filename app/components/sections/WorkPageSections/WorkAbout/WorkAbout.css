@@ -49,7 +49,7 @@
 }
 
 .work__about_content_top_title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--clr-white);
   text-transform: uppercase;
@@ -199,7 +199,11 @@
   }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .work__about_content_top_title {
+    font-size: 18px;
+  }
+}
 
 @media (max-width: 640px) {
 
