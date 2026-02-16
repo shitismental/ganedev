@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { usePathname, useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 
 import Logo from "@/public/icons/logo.svg"
@@ -19,6 +20,9 @@ export default function Navbar() {
 
   const [isActive, setIsActive] = useState("about")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -52,13 +56,34 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    if (pathname === "/") {
+      const targetId = sessionStorage.getItem("scrollToTarget")
+
+      if (targetId) {
+        setTimeout(() => {
+          const element = document.getElementById(targetId)
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" })
+          }
+          sessionStorage.removeItem("scrollToTarget")
+        }, 100)
+      }
+    }
+  }, [pathname])
+
   const handleButtonClick = (tabName: string, targetId: string) => {
     setIsActive(tabName)
     setIsMenuOpen(false)
 
-    const element = document.getElementById(targetId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    if (pathname === "/") {
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      sessionStorage.setItem("scrollToTarget", targetId)
+      router.push("/")
     }
   }
 
@@ -91,35 +116,35 @@ export default function Navbar() {
             <button
               onClick={() => handleButtonClick("about", "about__section")}
               className={`nav__link ${isActive == "about" && "nav__active"}`}
-              >
+            >
               <Image src={profile} alt="profile icon" />
               About me
             </button>
             <button
               onClick={() => handleButtonClick("reviews", "reviews__section")}
               className={`nav__link ${isActive == "reviews" && "nav__active"}`}
-              >
+            >
               <Image src={chat} alt="chat icon" />
               Client review
             </button>
             <button
               onClick={() => handleButtonClick("work", "work__section")}
               className={`nav__link ${isActive == "work" && "nav__active"}`}
-              >
+            >
               <Image src={briefcase} alt="briefcase icon" />
               My work
             </button>
             <button
               onClick={() => handleButtonClick("design", "design__section")}
               className={`nav__link ${isActive == "design" && "nav__active"}`}
-              >
+            >
               <Image src={gamepad} alt="gamepad icon" />
               Game design
             </button>
             <button
               onClick={() => handleButtonClick("marketing", "marketing__section")}
               className={`nav__link ${isActive == "marketing" && "nav__active"}`}
-              >
+            >
               <Image src={target} alt="target icon" />
               Marketing & monetization
             </button>
