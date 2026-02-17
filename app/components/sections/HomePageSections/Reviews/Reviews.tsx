@@ -11,7 +11,6 @@ export default async function Reviews() {
   try {
     const res = await fetch(`${API_URL}/reviews`, {
       cache: "no-cache",
-      next: { revalidate: 3600 }
     });
     
     if (res.ok) {
