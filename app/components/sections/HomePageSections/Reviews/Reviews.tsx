@@ -9,7 +9,7 @@ export default async function Reviews() {
 
   let reviews = [];
   try {
-    const res = await fetch(`${API_URL}/reviews`, {
+    const res = await fetch(`${API_URL}/reviews/`, {
       cache: "no-cache",
     });
     
