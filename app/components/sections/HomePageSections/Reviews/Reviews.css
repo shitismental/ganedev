@@ -12,6 +12,7 @@
 .reviews__content_container {
   display: flex;
   flex-direction: column;
+  align-self: center;
   gap: 22px;
   flex: 1;
   padding: 40px 0 45px 0;
@@ -73,6 +74,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--clr-white);
+  white-space: pre-wrap;
 }
 
 .reviews__content_btns_container {
