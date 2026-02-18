@@ -60,6 +60,16 @@ a {
   user-select: none;
 }
 
+.page-wrapper canvas {
+  max-height: none !important;
+  max-width: none !important;
+}
+
+.react-pdf__Page canvas {
+  max-height: none !important;
+  max-width: none !important;
+}
+
 /* @media (max-width: 1536px) {
 
 }

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
