@@ -1,45 +1,75 @@
 import Image from "next/image"
-import Link from "next/link"
-
 import ResumeBtn from "../../../helpers/ResumeBtn/ResumeBtn"
 import "./About.css"
 
-import aboutImg from "@/public/imgs/about_img.png"
+const API_URL = process.env.API_URL
 
-export default function About() {
+export default async function About() {
+  let aboutData = null
+
+  try {
+    const res = await fetch(`${API_URL}/about/`, {
+      cache: "no-cache"
+    })
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch about data")
+    }
+
+    aboutData = await res.json()
+  } catch (error) {
+    console.error("About fetch error:", error)
+  }
+
+  if (!aboutData) return null
+
   return (
-    <>
-      <section className="about__section" id="about__section">
-        <div className="about__legend_container">
-          <span className="about__legend_title">
-            Ruslan Rudnev
-          </span>
-          <div className="about__legend_line"></div>
-        </div>
-        <div className="about__content_container">
-          <div className="about__content_text_container">
-            <h1 className="about__content_text_title">Game Producer, Project Coordinator, Game Designer Unity Developer Intern</h1>
-            <div className="about__content_text_desc_container">
-              <p className="about__content_text_desc">I am a third-year student in Creative Media and Game Technologies at Hanze University of Applied Sciences. In my university projects, I take on the role of Team lead. As an individual contributor, I have taken on roles such as Game Producer, Level Designer, Narrative Designer, and Programmer. I have also taken the lead in primary research, concepting the prototypes by brainstorming, and creating Game Design Documents.</p>
-              <p className="about__content_text_desc">I have worked on various types of games, including board games, 2D games, 3D VR projects, and mobile applications. Additionally, I’m comfortable presenting and pitching to an audience.</p>
-            </div>
-          </div>
-          <div className="about__content_video_container">
-            <video 
-              src="/videos/Home_About.mp4" 
-              className="about__content_video_preview"
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-            <ResumeBtn />
+    <section className="about__section" id="about__section">
+      <div className="about__legend_container">
+        <span className="about__legend_title">
+          Ruslan Rudnev
+        </span>
+        <div className="about__legend_line"></div>
+      </div>
+
+      <div className="about__content_container">
+        <div className="about__content_text_container">
+          <h1 className="about__content_text_title">
+            {aboutData.title}
+          </h1>
+
+          <div className="about__content_text_desc_container">
+            {aboutData.text &&
+              aboutData.text
+                .split("\n")
+                .filter((p: string) => p.trim() !== "")
+                .map((paragraph: string, index: number) => (
+                  <p
+                    key={index}
+                    className="about__content_text_desc"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
           </div>
         </div>
-      </section>
-    </>
+
+        <div className="about__content_video_container">
+          <video
+            src="/videos/Home_About.mp4"
+            className="about__content_video_preview"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          >
+            Your browser does not support the video tag.
+          </video>
+
+          <ResumeBtn resumeUrl={aboutData.resume} />
+        </div>
+      </div>
+    </section>
   )
 }

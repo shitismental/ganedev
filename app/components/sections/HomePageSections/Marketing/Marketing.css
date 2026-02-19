@@ -26,46 +26,6 @@
   text-transform: uppercase;
 }
 
-.marketing__content_container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-}
-
-.test {
-  background-color: red;
-  height: 50vh;
-  flex: 1;
-}
-
-.marketing__content_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  border: 1px solid var(--clr-white);
-  border-radius: 40px;
-  color: var(--clr-white);
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
-}
-
-.marketing__content_btn.left {
-  transform: rotate(180deg);
-}
-
-.marketing__content_btn svg {
-  width: 20px;
-  height: 20px;
-  transform: translateX(2);
-}
-
-.marketing__content_btn:hover {
-  background-color: var(--clr-white);
-  color: var(--clr-black);
-}
-
 @media (max-width: 1536px) {
 
 }
@@ -90,6 +50,10 @@
   .marketing__top_title {
     font-size: 18px;
   }  
+
+  .marketing__top_name {
+    text-align: end;
+  }
 }
 
 @media (max-width: 475px) {

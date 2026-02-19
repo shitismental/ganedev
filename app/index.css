@@ -3,7 +3,7 @@
   grid-template-columns: 240px 1fr;
   grid-template-rows: 1fr auto;
   min-height: 300vh;
-  gap: 2rem;
+  gap: 32px;
   padding: 3rem;
 }
 

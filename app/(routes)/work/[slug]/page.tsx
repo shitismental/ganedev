@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/layout/Navbar/Navbar";
 import WorkAbout from "@/app/components/sections/WorkPageSections/WorkAbout/WorkAbout";
 import WorkMechanics from "@/app/components/sections/WorkPageSections/WorkMechanics/WorkMechanics";
+import Gamedesign from "@/app/components/sections/HomePageSections/Gamedesign/Gamedesign";
 import RightSidePanel from "@/app/components/helpers/RightSidePanel/RightSidePanel";
 import Footer from "@/app/components/layout/Footer/Footer";
 
@@ -46,6 +47,7 @@ export default async function WorkShowcasePage({ params }: { params: Params }) {
       <main className="main__container">
         <WorkAbout name={name} full_desc={full_desc} tags={tags} />
         <WorkMechanics />
+        <Gamedesign />
       </main>
       <div className="footer">
         <Footer />

@@ -5,6 +5,7 @@ import About from "./components/sections/HomePageSections/About/About";
 import Reviews from "./components/sections/HomePageSections/Reviews/Reviews";
 import Work from "./components/sections/HomePageSections/Work/Work"
 import Marketing from "./components/sections/HomePageSections/Marketing/Marketing";
+import Gamedesign from "./components/sections/HomePageSections/Gamedesign/Gamedesign";
 import RightSidePanel from "./components/helpers/RightSidePanel/RightSidePanel";
 import Footer from "./components/layout/Footer/Footer"
 
@@ -25,6 +26,7 @@ export default function Home() {
           <Reviews />
           <Work />
           <Marketing />
+          <Gamedesign />
         </main>
         <div className="footer">
           <Footer />

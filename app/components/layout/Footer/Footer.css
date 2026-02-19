@@ -4,11 +4,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid red;
   background-color: var(--clr-black);
   padding: 40px 50px;
   border: 1px solid #2F2F2F;
   border-radius: 15px;
+  margin-top: 45px;
 }
 
 .footer__logo_container {

@@ -1,0 +1,84 @@
+.book__preview_container {
+  position: relative;
+  height: 700px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+}
+
+.book__preview_image {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.book__preview_container:hover .book__preview_image {
+  transform: scale(1.05);
+}
+
+.book__preview_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.75)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book__preview_button {
+  padding: 16px 40px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.book__preview_button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 60px rgba(255, 0, 0, 0.9);
+}
+
+.book__modal_container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40px;
+}
+
+.book__modal_viewer {
+  width: 90%;
+  height: 85vh;
+  border: none;
+  border-radius: 16px;
+}
+
+.book__modal_close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.book__modal_download {
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
