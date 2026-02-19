@@ -12,6 +12,9 @@ export default async function About() {
       cache: "no-cache"
     })
 
+    console.log("Status:", res.status)
+    console.log("URL:", `${API_URL}/about/`)
+
     if (!res.ok) {
       throw new Error("Failed to fetch about data")
     }
