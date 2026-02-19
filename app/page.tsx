@@ -9,6 +9,8 @@ import Gamedesign from "./components/sections/HomePageSections/Gamedesign/Gamede
 import RightSidePanel from "./components/helpers/RightSidePanel/RightSidePanel";
 import Footer from "./components/layout/Footer/Footer"
 
+export const dynamic = "force-dynamic"
+
 export const metadata = {
   title: 'Ruslan Rudniev',
   description: 'Portfolio of my 3D games and game design projects.',
