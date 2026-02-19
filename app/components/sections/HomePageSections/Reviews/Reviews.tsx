@@ -4,6 +4,8 @@ import ReviewsImg from "@/public/imgs/reviews_img.png"
 
 import ReviewsSlider from "@/app/components/helpers/ReviewsSlider/ReviewsSlider";
 
+export const dynamic = "force-dynamic"
+
 export default async function Reviews() {
   const API_URL = process.env.API_URL;
 

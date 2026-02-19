@@ -4,6 +4,8 @@ import "./About.css"
 
 const API_URL = process.env.API_URL
 
+export const dynamic = "force-dynamic"
+
 export default async function About() {
   let aboutData = null
 
