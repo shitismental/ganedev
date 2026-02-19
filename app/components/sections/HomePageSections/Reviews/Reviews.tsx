@@ -12,7 +12,10 @@ export default async function Reviews() {
     const res = await fetch(`${API_URL}/reviews/`, {
       cache: "no-cache",
     });
-    
+
+    console.log("Status:", res.status)
+    console.log("URL:", `${API_URL}/about/`)
+
     if (res.ok) {
       reviews = await res.json();
     }
@@ -24,9 +27,9 @@ export default async function Reviews() {
     <section className="reviews__section" id="reviews__section">
       <div className="reviews__line"></div>
       <div className="reviews__content_wrapper">
-        
+
         <ReviewsSlider reviews={reviews} />
-        
+
         <Image src={ReviewsImg} alt="reviews image" className="reviews__img" />
       </div>
       <div className="reviews__line"></div>
